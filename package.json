@@ -1,0 +1,27 @@
+{
+  "name": "beginning-algorithms",
+  "version": "1.0.0",
+  "description": "enhance knowledge of algorithms and data structures while learning typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keenanamigos/beginner-algorithms.git"
+  },
+  "author": "keenanamigos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/keenanamigos/beginner-algorithms/issues"
+  },
+  "homepage": "https://github.com/keenanamigos/beginner-algorithms#readme",
+  "devDependencies": {
+    "@types/chai": "^4.0.2",
+    "@types/mocha": "^2.2.41",
+    "chai": "^4.1.0",
+    "mocha": "^3.5.0",
+    "ts-node": "^3.3.0",
+    "typings": "^2.1.1"
+  }
+}
