@@ -44,35 +44,3 @@ var ArrayIterator = (function () {
     return ArrayIterator;
 }());
 exports.ArrayIterator = ArrayIterator;
-// Tests until Mocha is working
-console.log("/* Iteration Respects Bounds */");
-var testArray = ["A", "B", "C", "D", "E", "F"];
-var iterator = new ArrayIterator(testArray, 1, 3);
-iterator.first();
-console.log(iterator.isDone()); // Should return false [PASS]
-console.log(testArray[1] === iterator.current()); // Should return true [PASS]
-iterator.next();
-console.log(iterator.isDone()); // Should return false [PASS]
-console.log(testArray[2] === iterator.current()); // Should return true [PASS]
-iterator.next();
-console.log(iterator.isDone()); // Should return false [PASS]
-console.log(testArray[3] === iterator.current()); // Should return true [PASS]
-iterator.next();
-console.log(iterator.isDone()); // Should return true [PASS]
-// console.log(iterator.current()); // Throws correct error [RangeError] [PASS]
-console.log("-------------------------");
-console.log("/* Backwards Iteration */");
-var newTestArray = ["A", "B", "C"];
-var someIterator = new ArrayIterator(newTestArray);
-someIterator.last();
-console.log(someIterator.isDone()); // Shoud return false [PASS]
-console.log(newTestArray[2] === someIterator.current()); // Should return true
-someIterator.previous();
-console.log(someIterator.isDone()); // Shoud return false [PASS]
-console.log(newTestArray[1] === someIterator.current()); // Should return true [PASS]
-someIterator.previous();
-console.log(someIterator.isDone()); // Shoud return false [PASS]
-console.log(newTestArray[0] === someIterator.current()); // Should return true [PASS]
-someIterator.previous();
-console.log(someIterator.isDone()); // Shoud return true [PASS]
-// console.log(someIterator.current()); // Throws correct error [RangeError] [PASS] 
