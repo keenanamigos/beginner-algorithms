@@ -4,7 +4,7 @@
   "description": "enhance knowledge of algorithms and data structures while learning typescript",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
