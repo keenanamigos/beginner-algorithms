@@ -7,13 +7,13 @@ var ReverseIterator = (function () {
             this.iterator = iterator;
         }
     }
-    // Class Methods
-    ReverseIterator.prototype.first = function () {
-        return this.iterator.last();
+    // Class Methods    
+    ReverseIterator.prototype.last = function () {
+        this.iterator.first();
     };
     ;
-    ReverseIterator.prototype.last = function () {
-        return this.iterator.first();
+    ReverseIterator.prototype.first = function () {
+        this.iterator.last();
     };
     ;
     ReverseIterator.prototype.isDone = function () {
@@ -21,11 +21,11 @@ var ReverseIterator = (function () {
     };
     ;
     ReverseIterator.prototype.next = function () {
-        return this.iterator.previous();
+        this.iterator.previous();
     };
     ;
     ReverseIterator.prototype.previous = function () {
-        return this.iterator.next();
+        this.iterator.next();
     };
     ;
     ReverseIterator.prototype.current = function () {

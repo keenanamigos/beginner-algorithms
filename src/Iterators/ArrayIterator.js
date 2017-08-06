@@ -36,7 +36,7 @@ var ArrayIterator = (function () {
     ;
     ArrayIterator.prototype.current = function () {
         if (this.isDone()) {
-            throw new RangeError;
+            throw RangeError;
         }
         return this.array[this.currentValue];
     };

@@ -1,6 +1,9 @@
 import { IIterator } from "./IteratorInterface"
 
 export class ReverseIterator implements IIterator {
+    // Class Variables
+    private readonly iterator: IIterator;
+
     // Constructor
     public constructor(iterator: IIterator) {
         if (iterator !== null) {
@@ -8,16 +11,13 @@ export class ReverseIterator implements IIterator {
         }
     }
 
-    // Class Variables
-    private readonly iterator: IIterator;
-
-    // Class Methods
-    public first(): void {
-       return this.iterator.last();
-    };
-    
+    // Class Methods    
     public last(): void {
-        return this.iterator.first();
+        this.iterator.first();
+    };
+
+    public first(): void {
+         this.iterator.last();
     };
     
     public isDone(): boolean {
@@ -25,11 +25,11 @@ export class ReverseIterator implements IIterator {
     };
     
     public next(): void {
-        return this.iterator.previous();
+        this.iterator.previous();
     };
     
     public previous(): void {
-        return this.iterator.next();
+        this.iterator.next();
     };
     
     public current(): any {

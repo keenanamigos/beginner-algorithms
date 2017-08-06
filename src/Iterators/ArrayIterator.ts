@@ -41,7 +41,7 @@ export class ArrayIterator implements IIterator {
     
     public current(): any {
         if (this.isDone()) {
-            throw new RangeError;
+            throw RangeError;
         }
         
         return this.array[this.currentValue]; 
