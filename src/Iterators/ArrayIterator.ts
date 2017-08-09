@@ -41,7 +41,7 @@ export class ArrayIterator implements IIterator {
     
     public current(): any {
         if (this.isDone()) {
-            throw RangeError;
+            throw new RangeError("This index you are trying to access is out of bounds");
         }
         
         return this.array[this.currentValue]; 
