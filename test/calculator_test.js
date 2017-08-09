@@ -1,7 +1,7 @@
 var expect = require('chai').expect;
 
 describe('calculate', () => {
-    let PowerCalculator = require('../src/Calculator/calculator').PowerCalculator;
+    let PowerCalculator = require('../dist/Calculator/calculator').PowerCalculator;
     let calculator = new PowerCalculator();
 
     it('should return 1 if a number is raised to the 0th power', () => {

@@ -2,8 +2,8 @@ var expect = require('chai').expect;
 
 describe('Forward Iteration (Reverse)', () => {
     const testArray = ["A", "B", "C"];
-    const ReverseIterator = require('../src/Iterators/ReverseIterator').ReverseIterator;
-    const ArrayIterator = require('../src/Iterators/ArrayIterator').ArrayIterator;
+    const ReverseIterator = require('../dist/Iterators/ReverseIterator').ReverseIterator;
+    const ArrayIterator = require('../dist/Iterators/ArrayIterator').ArrayIterator;
     let iterator = new ReverseIterator(new ArrayIterator(testArray));
 
     iterator.first();
@@ -41,8 +41,8 @@ describe('Forward Iteration (Reverse)', () => {
 
 describe('Backwards Iteration (Reverse', () => {
     const testArray = ["A", "B", "C"];
-    const ReverseIterator = require('../src/Iterators/ReverseIterator').ReverseIterator;
-    const ArrayIterator = require('../src/Iterators/ArrayIterator').ArrayIterator;
+    const ReverseIterator = require('../dist/Iterators/ReverseIterator').ReverseIterator;
+    const ArrayIterator = require('../dist/Iterators/ArrayIterator').ArrayIterator;
     let iterator = new ReverseIterator(new ArrayIterator(testArray));
 
     iterator.last();

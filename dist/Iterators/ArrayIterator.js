@@ -1,12 +1,10 @@
 "use strict";
-exports.__esModule = true;
-var ArrayIterator = (function () {
+Object.defineProperty(exports, "__esModule", { value: true });
+class ArrayIterator {
     // Constructor
-    function ArrayIterator(array, start, length) {
-        if (start === void 0) { start = 0; }
-        if (length === void 0) { length = array.length; }
+    constructor(array, start = 0, length = array.length) {
         this.currentValue = -1;
-        var lastCheck = start + length - 1;
+        const lastCheck = start + length - 1;
         if (array !== null && start >= 0 && start < array.length && length >= 0 && lastCheck < array.length) {
             this.array = array;
             this.start = start;
@@ -14,33 +12,32 @@ var ArrayIterator = (function () {
         }
     }
     // Class Methods
-    ArrayIterator.prototype.first = function () {
+    first() {
         this.currentValue = this.start;
-    };
+    }
     ;
-    ArrayIterator.prototype.last = function () {
+    last() {
         this.currentValue = this.end;
-    };
+    }
     ;
-    ArrayIterator.prototype.isDone = function () {
+    isDone() {
         return this.currentValue < this.start || this.currentValue > this.end;
-    };
+    }
     ;
-    ArrayIterator.prototype.next = function () {
+    next() {
         this.currentValue++;
-    };
+    }
     ;
-    ArrayIterator.prototype.previous = function () {
+    previous() {
         this.currentValue--;
-    };
+    }
     ;
-    ArrayIterator.prototype.current = function () {
+    current() {
         if (this.isDone()) {
-            throw RangeError;
+            throw new RangeError("This index you are trying to access is out of bounds");
         }
         return this.array[this.currentValue];
-    };
+    }
     ;
-    return ArrayIterator;
-}());
+}
 exports.ArrayIterator = ArrayIterator;
