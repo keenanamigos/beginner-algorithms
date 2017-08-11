@@ -1,5 +1,5 @@
 import { IIterator } from "./IteratorInterface"
 
-interface IIterable {
+export interface IIterable {
     iterator(): IIterator;
 }
